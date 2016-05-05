@@ -1,0 +1,126 @@
+<!-- index.html -->
+<!doctype html>
+<!-- We will create a mainController and bind it to HTML which will give us access to the entire DOM -->
+<html ng-app="dm-app">
+<head>
+
+    <meta name="fragment" content="!">
+    <!-- We define the SEO variables we want to dynamically update -->
+    <title>Medicines</title>
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/css/bootstrap.min.css" />
+    <style type="text/css">
+        body {
+            margin-top: 60px !important;
+        }
+    </style>
+
+    <!-- JS -->
+    
+    <script src="jquery-2.2.3.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="app.js"></script>
+
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    
+    <!-- CSS code from Bootply.com editor -->
+
+    <style type="text/css">
+        /*
+A Bootstrap 3.1 affix sidebar template
+from http://bootply.com
+
+This CSS code should follow the 'bootstrap.css'
+in your HTML file.
+
+license: MIT
+author: bootply.com
+*/
+
+        body {
+            padding-top: 50px;
+        }
+
+        #masthead {
+            min-height: 250px;
+        }
+
+            #masthead h1 {
+                font-size: 30px;
+                line-height: 1;
+                padding-top: 20px;
+            }
+
+            #masthead .well {
+                margin-top: 8%;
+            }
+
+        @media screen and (min-width: 768px) {
+            #masthead h1 {
+                font-size: 50px;
+            }
+        }
+
+        .navbar-bright {
+            background-color: #111155;
+            color: #fff;
+        }
+
+        .affix-top, .affix {
+            position: static;
+        }
+
+        @media (min-width: 979px) {
+            #sidebar.affix-top {
+                position: static;
+                margin-top: 30px;
+                width: 228px;
+            }
+
+            #sidebar.affix {
+                position: fixed;
+                top: 70px;
+                width: 228px;
+            }
+        }
+
+        #sidebar li.active {
+            border: 0 #eee solid;
+            border-right-width: 5px;
+        }
+    </style>
+    <!--<script id="_carbonads_projs" type="text/javascript" src="./Bootply snippet - Bootstrap Bootstrap 3 Affix Sidebar_files/C6AILKT.json"></script>
+    <script type="text/javascript" src="./Bootply snippet - Bootstrap Bootstrap 3 Affix Sidebar_files/saved_resource"></script>-->
+
+
+<!-- HTML code from Bootply.com editor -->
+
+<!--bootply-->
+
+
+</head> 
+<body>
+    <div class="container">
+
+        <!-- NAVIGATION BAR -->
+        <div class="bs-example bs-navbar-top-example">
+            <nav class="navbar navbar-fixed-top navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Medication</a>
+                </div>
+
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>                    
+                </ul>
+            </nav>
+        </div>
+       
+        <!-- where we will inject our template data -->
+        <div class="rightcol" ng-view></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "healthcare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "elasticsearch": "^11.0.1",
+    "express": "^4.13.4",
+    "prerender-node": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "baljeet",
+  "license": "ISC"
+}

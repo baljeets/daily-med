@@ -1,0 +1,101 @@
+<!--main-->
+<div class="container" ng-init="getAllMeds()">
+    <div class="row">
+        <!--left-->
+        <div class="col-md-3" id="leftCol">
+            <ul class="nav nav-stacked affix-top" id="sidebar">
+                <li class="active" ng-repeat="med in medicines  track by $index" ng-if="(med.title!='')">
+                    <a id="a{{$index}}" ng-click="gotoAnchor($index)" href="javascript://">{{med.title}}</a></li>
+            </ul>
+        </div>
+        <!--/left-->
+
+        <!--right-->
+        <div class="col-md-9">
+            
+            <div id="d{{$index}}" class="col-md-9" ng-repeat="med in medicines  track by $index" ng-if="med.title!=''">
+                <h2>{{med.title}}</h2>
+            
+                <div ng-if="med.sections.length>0" ng-repeat="section in med.sections track by $index">
+					<h4>{{section.title}}</h4>
+                    <p ng-repeat="para in section.paragraphs  track by $index">
+                        {{para}}
+                    </p>
+                </div>
+
+                 <hr>
+            </div>
+        </div>
+        <!--/right-->
+    </div>
+    <!--/row-->
+</div>
+<!--/container-->
+
+
+
+
+
+
+<style>
+    .ad {
+        position: absolute;
+        bottom: 70px;
+        right: 48px;
+        z-index: 992;
+        background-color: #f3f3f3;
+        position: fixed;
+        width: 155px;
+        padding: 1px;
+    }
+
+    .ad-btn-hide {
+        position: absolute;
+        top: -10px;
+        left: -12px;
+        background: #fefefe;
+        background: rgba(240,240,240,0.9);
+        border: 0;
+        border-radius: 26px;
+        cursor: pointer;
+        padding: 2px;
+        height: 25px;
+        width: 25px;
+        font-size: 14px;
+        vertical-align: top;
+        outline: 0;
+    }
+
+    .carbon-img {
+        float: left;
+        padding: 10px;
+    }
+
+    .carbon-text {
+        color: #888;
+        display: inline-block;
+        font-family: Verdana;
+        font-size: 11px;
+        font-weight: 400;
+        height: 60px;
+        margin-left: 9px;
+        width: 142px;
+        padding-top: 10px;
+    }
+
+        .carbon-text:hover {
+            color: #666;
+        }
+
+    .carbon-poweredby {
+        color: #6A6A6A;
+        float: left;
+        font-family: Verdana;
+        font-size: 11px;
+        font-weight: 400;
+        margin-left: 10px;
+        margin-top: 13px;
+        text-align: center;
+    }
+</style>
+
