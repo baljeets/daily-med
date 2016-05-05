@@ -19,24 +19,24 @@ app.get('/', function(req, res){
 });
 
 app.get('/api/getmeds',function(req,res){	
-	//var readable = fs.createReadStream(usersFilePath);
-	//readable.pipe(res)	
-	client.search({
-		  index: 'cp',
-		  type:'sections',
-          size:1000
-		  //q: '*'
-		}, function (error, response) {
-			var hits = response.hits.hits;
-			var hitsRes = [];
-			console.log(hits.length);
-			for( var index=0;index<=hits.length-1;index++)
-			{
-				var hit = hits[index];
-				hitsRes.push(hit._source);
-			}
-			res.send(JSON.stringify(hitsRes));
-		});
+	var readable = fs.createReadStream(usersFilePath);
+	readable.pipe(res)	
+	// client.search({
+		  // index: 'cp',
+		  // type:'sections',
+          // size:1000
+		  // //q: '*'
+		// }, function (error, response) {
+			// var hits = response.hits.hits;
+			// var hitsRes = [];
+			// console.log(hits.length);
+			// for( var index=0;index<=hits.length-1;index++)
+			// {
+				// var hit = hits[index];
+				// hitsRes.push(hit._source);
+			// }
+			// res.send(JSON.stringify(hitsRes));
+		// });
 });
 
 //app.listen(8081); 
