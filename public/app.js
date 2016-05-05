@@ -21,7 +21,7 @@ var app = angular.module('dm-app', ['ngRoute'])
 app.service('dailyMedService', ['$http', function ($http) {
     var dailyMedService = {
         getDailyMeds: function () {
-            return $http.get('http://localhost:8081/api/getmeds');
+            return $http.get('/api/getmeds');
         }
     };
     return dailyMedService;
