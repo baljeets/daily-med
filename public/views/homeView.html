@@ -12,7 +12,7 @@
 
         <!--right-->
         <div class="col-md-9">
-            
+            <h4 ng-show="medicines.length<=0">Loading...</h4>
             <div id="d{{$index}}" class="col-md-9" ng-repeat="med in medicines  track by $index" ng-if="med.title!=''">
                 <h2>{{med.title}}</h2>
             
